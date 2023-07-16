@@ -1,0 +1,109 @@
+.proyectos-contain{
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  border: .2px black solid;
+  border-radius: 5px;
+  box-shadow:  2px 4px rgba(0, 0, 0, .5);
+  background-color: rgba(89, 132, 176, .4);
+
+}
+
+.ordenador{
+  display: flex;
+  align-items: center
+}
+.ordenador img {
+  height: 20px;
+  width: 30px;
+  margin: 5px;
+}
+
+.barrasuperior{
+  height: 70px;
+
+}
+
+.barra{
+  display: flex;
+}
+
+
+.barrita{
+  background-color: white;
+  border-radius: 2px;
+  height: 30px;
+  width: 60%;
+  margin-left: 10px;
+  font-size: 14px;
+  align-items: center;
+  display: flex;
+
+}
+.barrita img{
+  height: 20px;
+  width: 30px;
+}
+
+.botones{
+  position: absolute;
+  right: 2px;
+  top: 0px;
+}
+.cerrar{
+  background-color: rgba(187, 66, 49, 1);
+  width: 50px;
+  
+}
+
+
+
+
+
+.juegos-cont{
+  display: flex;
+  background-color: white;
+  height: 84%;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.juegos{
+  display: flex;
+  align-items: center
+}
+.juegos img {
+  height: 20px;
+  width: 30px;
+  margin: 5px;
+}
+
+.juego{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  width: 80px;
+  align-items: center;
+  font-size: 14px;
+ text-align: center;
+}
+
+.juego:hover{
+  background-color: rgb(94, 94, 94, 0.3);
+  border-radius: 4px;
+}
+
+.juego img{
+  margin: 5px;
+height: 30px;
+width: 30px;
+}
+
+
+.flecha1{
+  border: 50%;
+}

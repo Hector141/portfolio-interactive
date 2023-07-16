@@ -1,0 +1,114 @@
+.perfil-contain {
+  height: 500px;
+  width: 400px;
+  background-color: rgb(36, 35, 35, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: all 2s ease;
+  position: absolute;
+  bottom: 55px;
+  display: flex;
+}
+
+.perfil-cont {
+  width: 35%;
+}
+
+.perfil-img {
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  border: 4px rgba(87, 87, 87, 0.5) solid;
+  margin-left: 25px;
+  margin-top: -30px;
+  top: -30px;
+}
+
+.data-perfil {
+  margin-top: 10px;
+}
+
+.dat-div {
+    display: flex;
+    height: 35px;
+}
+
+.dat-div:hover {
+  background-color: rgb(59, 59, 59, 0.5);
+  border-radius: 4px;
+  border: 2px solid rgb(59, 59, 59, 0.5);
+  cursor: pointer;
+}
+
+.data-perfil p {
+margin-left: 5px;
+margin-top: 8px;
+  color: white;
+  font-size: 13px;
+  
+}
+
+.datos-cont {
+  background-color: white;
+  height: 480px;
+  margin: 5px;
+  border-radius: 3px;
+  width: 60%;
+  padding: 4px;
+}
+
+.algo {
+  display: flex;
+  margin: 5px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.algo:hover {
+  background-color: rgba(11, 8, 223, 0.1);
+  border: 1px black solid;
+  border-radius: 3px;
+}
+
+.algo p {
+  margin-top: 10px;
+}
+.algo img {
+  margin: 5px;
+  width: 40px;
+  height: 30px;
+}
+
+.tprogramas {
+  border-top: 2px solid rgb(65, 152, 233, 0.3);
+}
+.tprogramas:hover {
+  background-color: rgba(11, 8, 223, 0.1);
+  border: 1px black solid;
+  border-radius: 3px;
+}
+
+.allP {
+  width: 220px;
+}
+
+.search {
+  background-color: rgba(60, 46, 255, 0.1);
+  width: 61.8%;
+  position: absolute;
+  bottom: 7px;
+  height: 50px;
+  margin-left: 5px;
+  border-top: 1px solid grey;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search input {
+  border: 1px solid black;
+  width: 90%;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: white;
+  color: grey;
+}
