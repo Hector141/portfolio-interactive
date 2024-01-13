@@ -1,7 +1,50 @@
 import "./about.css"
 import nota from "../logos/notepad.png"
+import React, { useState, useEffect } from "react";
 
 function About({onCerrarProyectos}) {
+
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 45, y: 10 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (isDragging) {
+        const offsetX = e.clientX - dragStart.x;
+        const offsetY = e.clientY - dragStart.y;
+  
+        const windowWidth = document.documentElement.clientWidth;
+        const windowHeight = document.documentElement.clientHeight;
+        const maxX = windowWidth;  
+        const maxY = windowHeight;  
+  
+
+        const newX = Math.max(0, Math.min(position.x + offsetX / windowWidth * 100, maxX / windowWidth * 50));
+        const newY = Math.max(0, Math.min(position.y + offsetY / windowHeight * 100, maxY / windowHeight * 13));
+  
+        setPosition({ x: newX, y: newY });
+        setDragStart({ x: e.clientX, y: e.clientY });
+      }
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isDragging, dragStart,position.x, position.y]);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setDragStart({ x: e.clientX, y: e.clientY });
+  };
 
     
     const handleCerrarProyectos = () => {
@@ -9,8 +52,8 @@ function About({onCerrarProyectos}) {
       };
 
   return (
-<div className="about-contain">
-<div className='arriba'>
+<div className="about-contain" style={{ left: `${position.x}%`, top: `${position.y}%` }}>
+<div className='arriba' onMouseDown={handleMouseDown}>
     <div className='ordenador'><img className='nota' src={nota} alt="nota" />Sobre Mi.txt</div>
 
    

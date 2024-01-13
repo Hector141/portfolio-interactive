@@ -1,20 +1,31 @@
-.proyectos-contain{
-  height: 50%;
-  width: 50%;
+.games-contain{
+  height: calc(50% );
+  width: calc(50% );
   position: absolute;
   left: 25%;
   top: 25%;
-  border: .2px black solid;
+  border: 0.2px black solid;
   border-radius: 5px;
-  box-shadow:  2px 4px rgba(0, 0, 0, .5);
-  background-color: rgba(89, 132, 176, .4);
-
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(89, 132, 176, 0.4);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
 }
+
+.games-contain.maximized {
+  width: 100%;
+  height: 93.5%;
+  left: 0;
+  top: 0;
+}
+
 
 .ordenador{
   display: flex;
   align-items: center
 }
+
 .ordenador img {
   height: 20px;
   width: 30px;
@@ -23,7 +34,7 @@
 
 .barrasuperior{
   height: 70px;
-
+  user-select: none;
 }
 
 .barra{
@@ -34,7 +45,7 @@
 .barrita{
   background-color: white;
   border-radius: 2px;
-  height: 30px;
+  height: 28px;
   width: 60%;
   margin-left: 10px;
   font-size: 14px;
@@ -58,14 +69,10 @@
   
 }
 
-
-
-
-
 .juegos-cont{
   display: flex;
   background-color: white;
-  height: 84%;
+  height: 100%;
   margin-left: 5px;
   margin-bottom: 5px;
   margin-right: 5px;

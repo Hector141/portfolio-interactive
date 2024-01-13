@@ -1,44 +1,139 @@
 .barra-contain{
     position: absolute;
-    bottom: 0px;
+    bottom: -0px;
     height: 6%;
     width: 100%;
-    border-top: 1.5px black solid;
+    border-top: 1.5px rgba(255, 255, 255, 0.459) solid;
     display: flex;
     justify-content: flex-start;
      align-items: center;
     background-color: rgb(36, 35, 35 , 0.5) ;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    user-select: none;
 }
 
 .logo1-contain {
     display: flex;
+    height: 100%;
     justify-content: center;
     align-items: center;
+    padding-left: 5px;
+    padding-bottom: 3px;
   }
+  
 
 .logo1,.logo2 , .logo3, .logo4{
-    padding-left: 5px;
-    height: 50px;
+    max-height: 40px;
+    min-height: 30px;
 }
 
-.logo2, .logo3, .logo4{
-    margin-left: 50px;
+.logo2-contain, .logo3-contain, .logo4-contain{
+    margin-left: 30px;
+    height: 100%;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
-.logo2:hover , .logo3:hover , .logo4:hover{
+
+
+.logo2-contain:hover , .logo3-contain:hover , .logo4-contain:hover ,.logo2-contain.internet-active:hover, .logo3-contain.proyect-active{
     background-color: rgba(2, 1, 63, 0.5);
-    border-radius: 3px;
 }
 
 
-.logo2.internet-active {
-    background-color: rgba(2, 1, 63, 0.5);
-    border-radius: 3px;
+.logo2-contain.internet-active, .logo3-contain.proyect-active {
+    background-color: rgba(2, 1, 63, 0.26);
+    
   }
 
 
-  .logo3.proyect-active {
-    background-color: rgba(2, 1, 63, 0.5);
-    border-radius: 3px;
+  .right-part{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .rectangle{
+    background-color: rgba(0, 4, 255, 0.151);
+    width: 18px;
+    height: 97%;
+    border: 1px rgba(255, 255, 255, 0.466) solid;
+    border-top: none;
+    border-radius: .8px;
+
+  }
+.time{
+  font-size: 14px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+
+}
+.time p{
+  color: white;
+  font-weight: 500;
+  width: 70px;
+  margin: 5px;
+  margin-block-end:1px;
+  margin-block-start:1px;
+  text-align: center;
+}
+
+.vol{
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  cursor: default;
+}
+.vol-icon{
+  height: 18px;
+  margin: 10px;
+  color: rgba(255, 255, 255, 0.856);
+}
+
+.inter{
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  cursor: default;
+}
+
+.inter-icon{
+  height: 18px;
+  color: rgba(255, 255, 255, 0.856);
+}
+
+  @media (max-width: 1367px){
+
+    .logo1,.logo2 , .logo3, .logo4{
+      max-height: 40px;
+      min-height: 30px;
+  }
+  .logo2-contain, .logo3-contain, .logo4-contain{
+    margin-left: 40px;
+    height: 100%;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+  }
+
+  
+  @media (max-width: 1081px){
+
+    .logo1,.logo2 , .logo3, .logo4{
+      max-height: 35px;
+      min-height: 30px;
+  }
+
   }

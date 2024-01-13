@@ -1,106 +1,118 @@
-.proyectos-contain{
-    height: 50%;
-    width: 50%;
-    position: absolute;
-    left: 25%;
-    top: 25%;
-    border: .2px black solid;
-    border-radius: 5px;
-    box-shadow:  2px 4px rgba(0, 0, 0, .5);
-    background-color: rgba(89, 132, 176, .4);
-
+.proyectos-contain {
+  height: calc(50% );
+  width: calc(50% );
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  border: 0.2px black solid;
+  border-radius: 5px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(89, 132, 176, 0.4);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
 }
 
-.ordenador{
-    display: flex;
-    align-items: center
+.proyectos {
+  background-color: white;
+  margin: 5px;
+  height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.proyects-link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.ordenador {
+  display: flex;
+  align-items: center;
 }
 .ordenador img {
-    height: 20px;
-    width: 30px;
-    margin: 5px;
+  height: 20px;
+  width: 30px;
+  margin: 5px;
 }
 
-.barrasuperior{
-    height: 70px;
-
+.barrasuperior {
+  height: 70px;
+  user-select: none;
 }
 
-.barra{
-    display: flex;
+.barra {
+  display: flex;
+  font-size: 10px;
 }
 
-
-.barrita{
-    background-color: white;
-    border-radius: 2px;
-    height: 30px;
-    width: 60%;
-    margin-left: 10px;
-    font-size: 14px;
-    align-items: center;
-    display: flex;
-
+.barrita {
+  background-color: white;
+  border-radius: 2px;
+  height: 28px;
+  width: fit-content;
+  margin-left: 10px;
+  align-items: center;
+  display: flex;
 }
-.barrita img{
-    height: 20px;
-    width: 30px;
+.barrita img {
+  height: 20px;
+  width: 30px;
 }
 
-.botones{
-    position: absolute;
-    right: 2px;
-    top: 0px;
-}
-.cerrar{
-    background-color: rgba(187, 66, 49, 1);
-    width: 50px;
-    
+.botones {
+  position: absolute;
+  right: 2px;
+  top: 0px;
 }
 
-
-
-
-
-
-
-
-.flecha1 , .flecha2{
-    border-radius: 100%;
-    height: 30px;
-    margin-left:10px ;
-  }
-  .flecha2{
-    margin-left:3px
-  }
-
-.proyectos{
-    background-color: white;
-    height: 84%;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
+.botones  button{
+margin: 1px;
 }
 
-.proyecto1{
-    cursor: pointer;
-    height: 120px;
-    width: 200px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-
+.cerrar {
+  background-color: rgba(187, 66, 49, 1);
+  width: 50px;
+  border-radius: 3px;
 }
 
-.proyecto1:hover{
-    background-color: rgb(42, 6, 245, 0.1);
+.flecha1,
+.flecha2 {
+  border-radius: 100%;
+  height: 30px;
+  margin-left: 10px;
+}
+.flecha2 {
+  margin-left: 3px;
 }
 
+.proyecto1 {
+  cursor: pointer;
+  height: 120px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
 
-.facilM{
-    margin-top: 10px;
-    margin: 5px;
-    height: 80px;
-    width: 180px;
+.proyecto1:hover {
+  background-color: rgb(42, 6, 245, 0.1);
+}
+
+.facilM {
+  margin-top: 10px;
+  margin: 5px;
+  height: 80px;
+  width: 180px;
+}
+
+.proyectos-contain.maximized {
+  width: 100%;
+  height: 93.5%;
+  left: 0;
+  top: 0;
 }

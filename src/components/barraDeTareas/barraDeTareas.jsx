@@ -1,50 +1,103 @@
-import React, { useState } from 'react';
-import './barra.css';
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  toggleInternet,
+  minimizeInternet,
+  minimizeproyect,
+  setPerfilVisible,
+} from "../../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
+import "./barra.css";
 import logo1 from "../logos/logo1.png";
 import logo2 from "../logos/logo2.png";
 import logo3 from "../logos/logo3.png";
 import logo4 from "../logos/logo4.png";
-import Perfil from '../perfil/perfil';
-import { toggleInternet, minimizeInternet, minimizeproyect } from '../../redux/actions';
-import { useDispatch, useSelector } from 'react-redux';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faVolumeUp, faWifi } from "@fortawesome/free-solid-svg-icons";
 
 function BarraDeTareas() {
   const dispatch = useDispatch();
-  const internetVisible = useSelector(state => state.internetVisible);
-  const internete = useSelector(state => state.openInternet);
-  const proyectVisible = useSelector(state => state.proyectVisible)
-  const proyect = useSelector(state => state.openProyects)
-  const [logo1Visible, setLogo1Visible] = useState(false);
+  const openInternet = useSelector((state) => state.openInternet);
+  const internetVisible = useSelector((state) => state.internetVisible);
+  const proyectVisible = useSelector((state) => state.proyectVisible);
+  const proyect = useSelector((state) => state.openProyects);
+  const logo1Visible = useSelector((state) => state.logo1Visible);
+  const [dateTime, setDateTime] = useState(getFormattedDateTime);
+
+  // Función para obtener la fecha y hora formateada sin segundos
+  function getFormattedDateTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], { timeStyle: "short" });
+    const dateString = now.toLocaleDateString();
+    return { time: timeString, date: dateString };
+  }
+
+  // Función para actualizar la fecha y hora
+  const updateDateTime = useCallback(() => {
+    setDateTime(getFormattedDateTime());
+  }, []);
+
+  // Efecto de uso para ejecutar updateDateTime una vez al cargar la página
+  useEffect(() => {
+    updateDateTime();
+  }, [updateDateTime]);
+
+  // Establecer intervalo para actualizar la fecha y hora cada 1000 ms
+  useEffect(() => {
+    const intervalId = setInterval(updateDateTime, 1000);
+
+    // Limpieza del intervalo al desmontar el componente
+    return () => clearInterval(intervalId);
+  }, [updateDateTime]);
 
   const handleClickLogo2 = () => {
     dispatch(toggleInternet(true));
-    dispatch(minimizeInternet(!internete));
+    dispatch(minimizeInternet(!internetVisible));
   };
-
 
   const handleClickLogo3 = () => {
     dispatch(minimizeproyect(!proyect));
   };
 
   const handleClickLogo1 = () => {
-    setLogo1Visible(prevState => !prevState);
+    dispatch(setPerfilVisible(!logo1Visible));
   };
 
   return (
     <div className="barra-contain">
-      <div className={`logo1-contain ${logo1Visible ? 'active' : ''}`} onClick={handleClickLogo1}>
-        <img className='logo1' src={logo1} alt="Logo 1" />
+      <div
+        className={`logo1-contain ${logo1Visible ? "active" : ""}`}
+        onClick={handleClickLogo1}
+      >
+        <img className="logo1" src={logo1} alt="Logo 1" />
       </div>
-      <div className={`logo2-contain`}>
-        <img className={`logo2 ${internetVisible ? 'internet-active' : ''}`} onClick={handleClickLogo2} src={logo2} alt="Logo 2" />
+      <div
+        className={`logo2-contain ${openInternet ? "internet-active" : ""}`}
+        onClick={handleClickLogo2}
+      >
+        <img className={`logo2 `} src={logo2} alt="Logo 2" />
       </div>
-      <div className='logo3-contain'>
-        <img className={`logo3 ${proyectVisible ? 'proyect-active' : ''}`} onClick={handleClickLogo3} src={logo3} alt="Logo 3" />
+      <div
+        className={`logo3-contain ${proyectVisible ? "proyect-active" : ""}`}
+        onClick={handleClickLogo3}
+      >
+        <img className={`logo3`} src={logo3} alt="Logo 3" />
       </div>
-      <div className='logo4-contain'>
-        <img className='logo4' src={logo4} alt="Logo 4" />
+      <div className="logo4-contain">
+        <img className="logo4" src={logo4} alt="Logo 4" />
       </div>
-      {logo1Visible ? <Perfil /> : null}
+      <div className="right-part">
+        <div className="rectangle"></div>
+        <div className="time" title={dateTime.date}>
+          <p>{dateTime.time}</p>
+          <p>{dateTime.date}</p>
+        </div>
+        <div className="vol" title="Volumen">
+          <FontAwesomeIcon icon={faVolumeUp} className="vol-icon" />
+        </div>
+        <div className="inter" title="Wifi">
+          <FontAwesomeIcon className="inter-icon" icon={faWifi} />
+        </div>
+      </div>
     </div>
   );
 }

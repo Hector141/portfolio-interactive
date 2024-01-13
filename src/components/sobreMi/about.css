@@ -1,13 +1,15 @@
 .about-contain{
-    height: 800px;
+    z-index: 1;
+    height: 80%;
     width: 700px;
     box-shadow:  2px 4px rgba(0, 0, 0, .5);
     background-color: rgba(89, 132, 176, .4);
     position: absolute;
-    top: 5%;
-    left: 35%;
     border-radius: 5px;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
 }
 
 
@@ -41,17 +43,33 @@
 .barra2 div:hover{
 border: .1px solid black;
 border-radius: 4px;
+cursor: pointer;
 }
 
 .abajo{
     background-color: white;
-margin-top: 5px;
-margin-left: 5px;
-margin-right: 5px;
-height: 95%;
+margin: 5px;
+height: 100%;
 border: .5px solid black;
 }
 
 .about-data{
     margin: 3px;
 }
+
+
+
+
+  
+@media (max-width: 1081px){
+
+    .about-contain{
+        height: 80%;
+        width: 550px;
+    }
+    
+    .about-data{
+       font-size: 13.5px;
+    }
+
+  }

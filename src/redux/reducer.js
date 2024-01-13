@@ -4,10 +4,13 @@ const initialState = {
   calculadoraVisible: false,
   gamesVisible: false,
   internetVisible: false,
-  openInternet: true,
-  openProyects: true,
+  openInternet: false,
+  openProyects: false,
   proyectVisible: false,
- 
+  activeWindow: null, 
+  logo1Visible: false,
+  commandVisible: false,
+  openCommand:false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -27,21 +30,39 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           internetVisible: action.payload,
+          openInternet: action.payload,
         };
         case 'MINIMIZE_INTERNET':
         return {
           ...state,
-          openInternet: action.payload,
+          internetVisible: action.payload,
         };
         case 'TOGGLE_PROYECT':
         return {
           ...state,
           proyectVisible: action.payload,
+          openProyects: action.payload,
         };
         case 'MINIMIZE_PROYECT':
         return {
           ...state,
           openProyects: action.payload,
+        };
+        case 'SET_ACTIVE_WINDOW':
+          return {
+            ...state,
+            activeWindow: action.payload,
+          };
+          case 'SET_LOGO1_VISIBLE':
+            return {
+              ...state,
+              logo1Visible: action.payload,
+            };
+            case 'TOGGLE_COMMAND':
+        return {
+          ...state,
+          commandVisible: action.payload,
+          openCommand: action.payload,
         };
     default:
       return state;

@@ -26,8 +26,8 @@ function Clippy({onCerrarClippy}) {
     <div className='clippy-cont'>
         <button className='btn-cerrarClp' onClick={handleCerrarClippy}>X</button>
       <p>{dialogs[currentDialog]}
-       <div className='btn-cont'> <button className='dia-boton1' onClick={previousDialog}>&larr;</button>
-        <button className='dia-boton2' onClick={nextDialog}>&rarr;</button></div></p>
+       <button className='dia-boton1' onClick={previousDialog}>&larr;</button>
+        <button className='dia-boton2' onClick={nextDialog}>&rarr;</button></p>
       <img className='clippy' src={clippy} alt='clippy' />
       <div className='dialog-navigation'>
 

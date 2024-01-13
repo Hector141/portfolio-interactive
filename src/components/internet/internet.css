@@ -1,5 +1,6 @@
 body{
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .internet-contain{
@@ -12,7 +13,26 @@ body{
     border-radius: 5px;
     background-color: rgba(89, 132, 176, .4);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
+
+
+    
+  .internet-data{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #0F172A;
+    border: .5px solid black;
+    max-height: 100%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   
   
   .barrasuperior{
@@ -81,34 +101,7 @@ padding: 1px;
     cursor: pointer;
   }
   
-  
-  .internet-data{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #0F172A;
-    border: .5px solid black;
-    max-height: 87.5%;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
 
-
-
-  .foco {
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.0005) 70%);
-    pointer-events: none;
-    z-index: 9999;
-    display: none;
-  }
-  
 
   .pestañas{
     display: flex;

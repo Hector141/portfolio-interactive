@@ -16,6 +16,11 @@ export const toggleCalculadora = (value) => ({
     payload: value,
   });
 
+  export const toggleCommand = (value) => ({
+    type: 'TOGGLE_COMMAND',
+    payload: value,
+  });
+
 
   export const minimizeInternet = (value) => ({
     type: 'MINIMIZE_INTERNET',
@@ -32,3 +37,16 @@ export const toggleCalculadora = (value) => ({
     type: 'TOGGLE_PROYECT',
     payload: value,
   });
+
+  export const setActiveWindow = (windowName) => {
+    return {
+      type: 'SET_ACTIVE_WINDOW',
+      payload: windowName,
+    };
+  };
+
+  export const setPerfilVisible = (isVisible) => ({
+    type: 'SET_LOGO1_VISIBLE',
+    payload: isVisible,
+  });
+  

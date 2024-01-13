@@ -1,0 +1,9 @@
+3-agregar proyectos
+4-mejorar el internet(datos y eso)
+5 A-agregar rep de musica?
+5 B-agregar el command prompt
+6-agregar datos de contacto
+7-hacer todo de calculadora
+
+
+plus- empezar una pantalla de inicio
