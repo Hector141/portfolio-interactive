@@ -1,20 +1,26 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
-import ReactDOM from 'react-dom/client';
-import './index.css'
-import App from './App'
-import store from './redux/store'; 
-import { Provider } from 'react-redux'; 
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import store from './redux/store';
+import { Provider } from 'react-redux';
 import '@fortawesome/fontawesome-free/css/all.css';
 
+const Root = () => {
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    if (currentPath !== '/inicio') {
+      window.location.href = '/inicio';
+    }
+  }, []);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
-  <Provider store={store}>
-  <BrowserRouter>
-    <App />
-
-    </BrowserRouter>
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
-);
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<Root />);

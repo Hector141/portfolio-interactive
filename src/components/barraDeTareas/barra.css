@@ -22,12 +22,16 @@
   }
   
 
-.logo1,.logo2 , .logo3, .logo4{
+.logo1,.logo2 , .logo3, .logo4, .logo6{
     max-height: 40px;
     min-height: 30px;
 }
 
-.logo2-contain, .logo3-contain, .logo4-contain{
+.logo5{
+  height: 35px;
+}
+
+.logo2-contain, .logo3-contain, .logo4-contain , .logo5-contain, .logo6-contain{
     margin-left: 30px;
     height: 100%;
     width: 60px;
@@ -38,12 +42,12 @@
 
 
 
-.logo2-contain:hover , .logo3-contain:hover , .logo4-contain:hover ,.logo2-contain.internet-active:hover, .logo3-contain.proyect-active{
+.logo2-contain:hover , .logo3-contain:hover, .logo4-contain:hover , .logo5-contain:hover, .logo6-contain:hover ,.logo2-contain.internet-active:hover, .logo3-contain.proyect-active{
     background-color: rgba(2, 1, 63, 0.5);
 }
 
 
-.logo2-contain.internet-active, .logo3-contain.proyect-active {
+.logo2-contain.internet-active, .logo3-contain.proyect-active, .logo5-contain, .logo6-contain {
     background-color: rgba(2, 1, 63, 0.26);
     
   }
@@ -136,4 +140,7 @@
       min-height: 30px;
   }
 
+  .logo5{
+    height: 30px;
+  }
   }

@@ -7,6 +7,7 @@ import cod from "../logos/cod.png";
 import valo from "../logos/valo.png";
 import diablo from "../logos/diablo4.png";
 import lol from "../logos/lol.png";
+import tetris from "../logos/tetris.png";
 import flecha1 from "../logos/flechas1.jpg"
 import flecha2 from "../logos/flechas2.jpg"
 
@@ -81,14 +82,14 @@ function Juegos() {
 
   return (
     <div className={`games-contain  ${isMaximized ? 'maximized' : ''}`} style={{ left: `${position.x}%`, top: `${position.y}%`, zIndex: activeWindow === 'games' ? 3 : 1 }}>
-<div className='barrasuperior'onMouseDown={handleMouseDown}>
+<div className='proyect-barrasuperior'onMouseDown={handleMouseDown}>
 <div className='juegos'><img  src={juegos} alt="juegos" /> Mis juegos</div>
-    <div className='barra'>
-    <div><img className='flecha1' src={flecha1} alt="flecha1" /><img className='flecha2' src={flecha2} alt="flecha2" /></div>
+    <div className='proyect-barra'>
+    <div className='flechas'><img className='flecha1' src={flecha1} alt="flecha1" /><img className='flecha2' src={flecha2} alt="flecha2" /></div>
 
-        <div className='barrita'>▶ Ordenador ▶ System (C:) ▶ Hector ▶ Juegos</div>
+        <div className='proyect-barrita'>▶ Ordenador ▶ System (C:) ▶ Hector ▶ Juegos</div>
         
-        
+        <div className='secondbarrita'><p>Buscar Ordenador     🔍</p></div>
     </div>
     
     <div className='botones'><button>_</button>        
@@ -100,7 +101,7 @@ function Juegos() {
     <div className='juego'><img  src={cod} alt="cod" />Cod MW 2</div>
     <div className='juego'><img  src={diablo} alt="diablo" />Diablo 4</div>
     <div className='juego'><img  src={valo} alt="valo" />VALORANT</div>
-
+    <div className='juego'><img  src={tetris} title='desde aca no se puede abrir :D, usa el escritorio.' alt="tetris" />TETRIS</div>
 </div>
 </div>
   );

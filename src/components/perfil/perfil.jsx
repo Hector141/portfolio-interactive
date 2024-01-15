@@ -7,12 +7,36 @@ import Command from "../logos/command.jpg";
 import juegos from "../logos/juegos.png";
 import notepad from "../logos/notepad.png";
 import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
 import { toggleCalculadora, toggleGames, toggleInternet, toggleProyect, minimizeInternet, minimizeproyect, setPerfilVisible, toggleCommand } from '../../redux/actions';
 
 function Perfil() {
   const dispatch = useDispatch();
   const internete = useSelector(state => state.openInternet);
   const proyect = useSelector(state => state.openProyects);
+
+  const [showContactOptions, setShowContactOptions] = useState(false);
+  const [copied, setCopied] = useState(false);
+  let timeoutId;
+
+  const handleCopyClick = (text) => {
+    navigator.clipboard.writeText(text)
+      .then(() => setCopied(true))
+      .catch((err) => console.error('Error copying to clipboard:', err));
+
+    // Resetea el estado de "copied" después de unos segundos
+    timeoutId = setTimeout(() => setCopied(false), 1000);
+  };
+
+  const handleOptionsMouseEnter = () => {
+    setShowContactOptions(true);
+    // Cancela el temporizador para ocultar las opciones si el mouse vuelve antes
+    clearTimeout(timeoutId);
+  };
+
+  const handleOptionsMouseLeave = () => {
+    timeoutId = setTimeout(() => setShowContactOptions(false), 100);
+  };
 
   const handleClickLogo2 = () => {
     dispatch(toggleInternet(true));
@@ -68,7 +92,16 @@ function Perfil() {
         <div className='data-perfil'>
           <div className='dat-div'><p>Mi musica</p></div>
           <div className='dat-div' onClick={handleClickProyectos}><p>Mis proyectos</p></div>
-          <div className='dat-div'><p>Mis datos de contacto</p></div>
+          <div className='dat-div' onMouseEnter={handleOptionsMouseEnter} onMouseLeave={handleOptionsMouseLeave}>
+        <p>Mis datos de contacto</p>
+        {showContactOptions && (
+          <div className="contact-options">
+            <button onClick={() => handleCopyClick('+54 3437516370')}>Teléfono</button>
+            <button onClick={() => handleCopyClick('Hectorcardoso18@outlook.com')}>Email</button>
+          </div>
+        )}
+        {copied && <p className='copied' style={{ color: 'green' }}>Copiado al portapapeles :D</p>}
+      </div>
           <a href='https://memes-templates-project-using-vue-3.vercel.app/' target='blank'><div className='dat-div'><p>Memes</p></div></a>
         </div>
       </div>

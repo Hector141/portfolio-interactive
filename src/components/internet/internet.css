@@ -1,11 +1,6 @@
-body{
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
 .internet-contain{
   z-index: 1;
-    height: 93.8%;
+    height: 93.6%;
     width: 100%;
     position: absolute;
     z-index: 10;
@@ -24,7 +19,6 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #0F172A;
-    border: .5px solid black;
     max-height: 100%;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -36,7 +30,7 @@ body{
   
   
   .barrasuperior{
-    height: 70px;
+    height: 115px;
   
   }
   
@@ -75,189 +69,230 @@ body{
   
   .favoritos{
     background-color: rgb(219, 218, 218);
-    width: 99.2%;
     border: .1px solid black;
-    margin: auto;
-  display: flex;
-padding: 1px;
-  }
-
-  .favoritos div{
+    margin: 10px 5px 0px 5px;
     display: flex;
-    width: 100px;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    color: rgb(91, 92, 128);
-  }
-
-  .primerdiv{
-    margin-left: 10px;
-  }
-
-  .favoritos div:hover{
-    background-color: rgb(156, 153, 153);
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-
-
-  .pestañas{
-    display: flex;
-    justify-content: right;
-    width: 100%;
-    height:70px ;
-
-
-  }
-  
-  .pestaña {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 10px;
-    height: 40px;
-    width: 120px;
-    border-radius: 3px;
-    color: #39C28A;
-    box-shadow: none;
-    transition: box-shadow 0.3s;
-    font-weight: bold;
-  }
-  
-  .pestaña:hover {
-    box-shadow: 0 0 5px 1px #39C28A;
-    cursor: pointer;
-  }
-  
-
-  .datos-about{
-    width: 40%;
-    margin-left: 300px;
-    margin-top: 80px;
-    color: white;
-  }
-
-  .datos-about h3{
-    color: #39C28A;
-    font-size: 30px;
-  }
-
-  .datos-about p{
-    color: #9c9999;
-    width: 80%;
-    font-size: 18px;
-  }
-
-  .datos-about h2{
-    font-size: 60px;
-  }
-
-
-
-
-
-.internet-proyectos{
-display: flex;
-flex-direction: column;
-width: 70%;
-justify-content: center;
-align-items: center;
-margin: auto;
-
-}
-.internet-data a {
-  text-decoration: none;
-}
-
- .proyecto2:hover{
-  background-color:#7c7cec0c;
-  border-radius: 5px;
-  
- }
-.proyectos-titulos{
-  margin-top: 150px;
-  font-size: 40px;
-  color: #39C28A;
-}
-  .proyecto2{
-    padding: 5px;
-    height: 220px;
-    width: 870px;
-    display: flex;
-    color: white;
+    padding: 1px;
+    height: 25px;
     
   }
 
-  .proyecto2 img{
-    margin-top: 60px;
-  }
-
-  .tecnologias-cont{
+  .favoritos h2{
+    font-size: 15px;
+    height: 100%;
+    margin-block-start: 0px;
+    width: 100px;
+    justify-content: center;
     display: flex;
-    width: 700px;
-
-  }
-
-  .proyect-info{
+    align-items: center;
+    font-weight: 450;
     margin-left: 20px;
   }
-  .tecnologias{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: fit-content;
-    margin: 5px;
-    color: #48B5BC;
-    background-color: #3469531c;
-    padding: 5px;
-    border-radius: 25px;
-  }
 
 
-  .datos-contacto{
-    position: absolute;
-  }
-
-  .link{
-    height: 50px;
-    width: 50px;
-    margin: 10px ;
-    border-radius: 3px;
-  }
-
-  .link:hover{
-    opacity: 0.5;
+  .favoritos h2:hover{
+    background-color: rgb(156, 153, 153);
+    border-radius: 2px;
+    cursor: pointer;
   }
   
 
 
-  .tecno-title{
-    color: #39C28A;
-    margin: auto;
-    margin-top: 150px ;
-    margin-bottom: 150px ;
-    font-size: 45px;
-  }
-  .about-tecnologias{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-
-.logo_tecno{
+.internet-data{
+  height: 100%;
+  background-image: url("https://i.pinimg.com/originals/ae/cf/e7/aecfe7199afa46d638994ba99f287800.jpg");
+  margin-left: 5px;
+  margin-right: 5px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  align-items: center;
-  text-align: center;
-  color:rgb(117, 118, 119)
 }
-  .logo_tecno img{
-    height: 50px;
+
+
+.data-container{
+  width: 80%;
+}
+
+.inter-about{
+  display: flex;
+}
+
+.about{
+  width: 50%;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.about h1, .inter-tecnologias-container h1, .inter-contactos-container h2{
+  color: #9c00ff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.about p{
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-shadow: 0 0 10px #9c00ff, 0 0 20px #9c00ff, 0 0 30px #9c00ff;
+  line-height: 2;
+}
+
+.inter-about img{
+  height: 200px;
+  margin-top: 170px ;
+  margin-left: 200px;
+  border-radius: 5px;
+}
+
+
+.inter-btn{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 20px;
+}
+
+.inter-btn button{
+  margin: 10px;
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  font-weight: 1000;
+  cursor: pointer;
+  color: white; /* Color base del texto (purpura) */
+  text-shadow: 0 0 10px #9c00ff, 0 0 20px #9c00ff, 0 0 30px #9c00ff;
+}
+
+.inter-btn button:hover{
+  background-color: rgba(255, 255, 255, 0.178);
+  border-radius: 5px;
+}
+
+
+.inter-tecnologias-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+
+.inter-tecnologias img{
+  height: 250px;
+  border-radius: 5px;
+}
+
+.inter-tecnologias{
+  width: 100%;
+  display: flex;
+}
+
+.tecnologias-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tecnologia{
+padding: 15px;
+margin: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+color: white;
+text-shadow: 0 0 10px #9c00ff, 0 0 20px #9c00ff, 0 0 30px #9c00ff;
+}
+
+
+.tecnologia:hover{
+  background-color: rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
   }
+
+.tecnologia img{
+  height: 80px;
+}
+
+
+.inter-contactos-container{
+  background-color: #0f172a8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inter-contactos{
+  display: flex;
+}
+
+.contatos{
+  margin: 20px;
+  border: 2px solid violet;
+  box-shadow: inset 0 0 5px purple, 0 0 10px purple;
+  border-radius: 8px;
+  padding: 5px;
+  color: white;
+  text-shadow: 0 0 10px #9c00ff, 0 0 20px #9c00ff, 0 0 30px #9c00ff;
+}
+
+
+
+@media (max-width: 1367px){
+
+
+
+  .data-container{
+    width: 90%;
+  }
+
+
+  .inter-about img{
+    width: auto;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  .about{
+    width: 80%;
+    margin-top: 70px;
+  }
+  
+
+}
+
+
+@media (max-width: 1081px){
+
+  .inter-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .inter-about img{
+    margin:0px;
+    width: 70%;
+  }
+
+  .about{
+    width: 100%;
+    margin-top: -20px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .inter-tecnologias{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.hackimg{
+  width: 50%;
+}
+
+}

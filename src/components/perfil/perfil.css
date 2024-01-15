@@ -114,3 +114,29 @@ margin-top: 8px;
   background-color: white;
   color: grey;
 }
+
+
+.contact-options{
+   position: absolute;
+   left: 400px;
+   margin-top: 5px;
+
+}
+
+.contact-options button{
+  height: 25px;
+  width: 70px;
+  background-color: rgba(3, 3, 3, 0.5);
+  border: 1px solid black;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  margin: 1px;
+}
+
+.copied{
+  position: absolute;
+  left: 480px;
+  margin-top: 5px;
+  font-weight: bold;
+}

@@ -1,7 +1,6 @@
 
 
 const initialState = {
-  calculadoraVisible: false,
   gamesVisible: false,
   internetVisible: false,
   openInternet: false,
@@ -11,16 +10,12 @@ const initialState = {
   logo1Visible: false,
   commandVisible: false,
   openCommand:false,
+  calculadoraVisible: false,
+  openCalculadora:false,
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'TOGGLE_CALCULADORA':
-      return {
-        ...state,
-        calculadoraVisible: action.payload,
-      };
-
       case 'TOGGLE_GAMES':
       return {
         ...state,
@@ -64,6 +59,22 @@ const reducer = (state = initialState, action) => {
           commandVisible: action.payload,
           openCommand: action.payload,
         };
+        case 'MINIMIZE_COMMAND':
+          return {
+            ...state,
+            commandVisible: action.payload,
+          };
+          case 'TOGGLE_CALCULADORA':
+            return {
+              ...state,
+              calculadoraVisible: action.payload,
+              openCalculadora: action.payload,
+            };
+            case 'MINIMIZE_CALCULADORA':
+              return {
+                ...state,
+                calculadoraVisible: action.payload,
+              };
     default:
       return state;
   }

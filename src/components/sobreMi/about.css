@@ -1,7 +1,7 @@
 .about-contain{
     z-index: 1;
-    height: 80%;
-    width: 700px;
+    height: 600px;
+    width: 650px;
     box-shadow:  2px 4px rgba(0, 0, 0, .5);
     background-color: rgba(89, 132, 176, .4);
     position: absolute;
@@ -13,14 +13,10 @@
 }
 
 
-
 .arriba{
     height: 30px;
     text-shadow: 4px 4px 4px rgba(255, 255, 255, 1);
 }
-
-
-
 
 .barra2{
     background-color: #DDE2F2;
@@ -49,27 +45,14 @@ cursor: pointer;
 .abajo{
     background-color: white;
 margin: 5px;
-height: 100%;
+height: 93%;
 border: .5px solid black;
 }
 
-.about-data{
+.about-data {
     margin: 3px;
+    overflow-y: auto;
+    max-height: 90%; 
 }
 
 
-
-
-  
-@media (max-width: 1081px){
-
-    .about-contain{
-        height: 80%;
-        width: 550px;
-    }
-    
-    .about-data{
-       font-size: 13.5px;
-    }
-
-  }

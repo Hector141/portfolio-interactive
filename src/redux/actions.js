@@ -4,6 +4,11 @@ export const toggleCalculadora = (value) => ({
   });
   
 
+  export const minimizeCalculadora = (value) => ({
+    type: 'MINIMIZE_CALCULADORA',
+    payload: value,
+  });
+  
   export const toggleGames = (value) => ({
     type: 'TOGGLE_GAMES',
     payload: value,
@@ -15,21 +20,19 @@ export const toggleCalculadora = (value) => ({
     type: 'TOGGLE_INTERNET',
     payload: value,
   });
+  
+  export const minimizeInternet = (value) => ({
+    type: 'MINIMIZE_INTERNET',
+    payload: value,
+  });
 
   export const toggleCommand = (value) => ({
     type: 'TOGGLE_COMMAND',
     payload: value,
   });
 
-
-  export const minimizeInternet = (value) => ({
-    type: 'MINIMIZE_INTERNET',
-    payload: value,
-  });
-
-
-  export const minimizeproyect = (value) => ({
-    type: 'MINIMIZE_PROYECT',
+  export const minimizeCommand = (value) => ({
+    type: 'MINIMIZE_COMMAND',
     payload: value,
   });
 
@@ -37,6 +40,13 @@ export const toggleCalculadora = (value) => ({
     type: 'TOGGLE_PROYECT',
     payload: value,
   });
+
+  export const minimizeproyect = (value) => ({
+    type: 'MINIMIZE_PROYECT',
+    payload: value,
+  });
+
+
 
   export const setActiveWindow = (windowName) => {
     return {
@@ -49,4 +59,4 @@ export const toggleCalculadora = (value) => ({
     type: 'SET_LOGO1_VISIBLE',
     payload: isVisible,
   });
-  
+

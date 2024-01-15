@@ -1,16 +1,17 @@
 import React, { useRef, useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
-import BarraDeTareas from './components/barraDeTareas/barraDeTareas';
 import Home from './components/home/home';
 import Perfil from './components/perfil/perfil';
+import Inicio from "./components/pantallaDeInicio/inicio";
 import { useSelector, useDispatch } from 'react-redux';
-import { setPerfilVisible } from './redux/actions';  // Ajusta la importación según la ubicación correcta
+import { setPerfilVisible } from './redux/actions';
 
 function App() {
   const logo1Visible = useSelector(state => state.logo1Visible);
   const dispatch = useDispatch();
-
   const perfilRef = useRef();
+  const location = useLocation();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -19,18 +20,27 @@ function App() {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    if (logo1Visible && location.pathname === "/home") {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [dispatch]);
+  }, [dispatch, logo1Visible, location.pathname]);
 
   return (
-    <div className="App" ref={perfilRef}>
-      <Home />
-      {logo1Visible ? <Perfil /> : null}
-      <BarraDeTareas />
+    <div>
+      {logo1Visible && location.pathname === "/home" && (
+        <div ref={perfilRef}>
+          <Perfil />
+        </div>
+      )}
+
+      <Routes>
+        <Route path="/inicio" element={<Inicio />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
     </div>
   );
 }

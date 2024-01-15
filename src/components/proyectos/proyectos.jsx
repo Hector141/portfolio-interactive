@@ -5,6 +5,13 @@ import facilM from "../logos/facilmarket.png";
 import equipo from "../logos/equipo.png";
 import flecha1 from "../logos/flechas1.jpg";
 import flecha2 from "../logos/flechas2.jpg";
+import facelook from "../logos/facelook.png"
+import countrys from "../logos/piContries.png"
+import memepage from "../logos/meme-page.png"
+import rick from "../logos/rick.png"
+import tetris from "../logos/tetrispage.png"
+import simplepage from "../logos/simple market page.png"
+
 import './proyectos.css';
 
 function Proyectos() {
@@ -85,11 +92,12 @@ useEffect(() => {
   };
   return (
     <div className={`proyectos-contain ${isMaximized ? 'maximized' : ''}`} style={{ left: `${position.x}%`, top: `${position.y}%`, zIndex: activeWindow === 'proyectos' ? 3 : 1 }}>
-      <div className='barrasuperior' onMouseDown={handleMouseDown}>
+      <div className='proyect-barrasuperior' onMouseDown={handleMouseDown}>
         <div className='ordenador'><img className='equipo' src={equipo} alt="equipo" />ordenador</div>
-        <div className='barra'>
-          <div><img className='flecha1' src={flecha1} alt="flecha1" /><img className='flecha2' src={flecha2} alt="flecha2" /></div>
-          <div className='barrita'><img className='equipo' src={equipo} alt="equipo" />▶ System(C:)▶Hector ▶Escritorio ▶Proyectos</div>
+        <div className='proyect-barra'>
+          <div className='flechas'><img className='flecha1' src={flecha1} alt="flecha1" /><img className='flecha2' src={flecha2} alt="flecha2" /></div>
+          <div className='proyect-barrita'><img className='equipo' src={equipo} alt="equipo" /><p>▶ System(C:)▶Hector ▶Escritorio ▶Proyectos</p></div>
+          <div className='secondbarrita'><p>Buscar Ordenador     🔍</p></div>
         </div>
         <div className='botones'>
           <button onClick={minimize}>_</button>
@@ -99,12 +107,50 @@ useEffect(() => {
       </div>
 
       <div className='proyectos'>
-        <a className='proyects-link' href="https://github.com/Hector141/facil-market-proyect" target="_blank" rel="noopener noreferrer">
+        <div className='proyectos-container'>
+        <a className='proyects-link' href="https://facil-market-proyect.vercel.app/" target="_blank" rel="noopener noreferrer">
           <div className='proyecto1'>
             <img className='facilM' src={facilM} alt="carpeta" />
             <label htmlFor='facilM'>Facil Market</label>
           </div>
         </a>
+        <a className='proyects-link' href="https://pi-countries-ft-37a-cardoso-hector-sc1c.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <div className='proyecto1'>
+            <img className='facilM' src={countrys} alt="carpeta" />
+            <label htmlFor='facilM'>Country Pi - HENRY</label>
+          </div>
+        </a>
+        <a className='proyects-link' href="https://memes-templates-project-using-vue-3.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <div className='proyecto1'>
+            <img className='facilM' src={memepage} alt="carpeta" />
+            <label htmlFor='facilM'>Meme page with Vue 3</label>
+          </div>
+        </a>
+        <a className='proyects-link' href="https://proyecto-red-social-con-vue-js-y-bootstrap.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <div className='proyecto1'>
+            <img className='facilM' src={facelook} alt="carpeta" />
+            <label htmlFor='facilM'>Facelook</label>
+          </div>
+        </a>
+        <a className='proyects-link' href="https://rick-and-morty-mauve-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <div className='proyecto1'>
+            <img className='facilM' src={rick} alt="carpeta" />
+            <label htmlFor='facilM'>Rick And Morty APP</label>
+          </div>
+        </a>
+        <a className='proyects-link' href="https://tetris-js-one.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <div className='proyecto1'>
+            <img className='facilM' src={tetris} alt="carpeta" />
+            <label htmlFor='facilM'>Tetris game.js</label>
+          </div>
+        </a>
+        <a className='proyects-link' href="https://market-simple-page-front-end.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <div className='proyecto1'>
+            <img className='facilM' src={simplepage} alt="carpeta" />
+            <label htmlFor='facilM'>Simple Market Page</label>
+          </div>
+        </a>
+        </div>
       </div>
     </div>
   );

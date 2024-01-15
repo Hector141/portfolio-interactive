@@ -1,0 +1,87 @@
+.user-inicio-container{
+    background-image: url("../logos/win7user.jpg");
+    background-size: 100% 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+  }
+  body{
+    background-color: rgba(0, 0, 0, 0.945);
+  }
+  
+  .user-inicio-container.active {
+    opacity: 0; 
+    transition: opacity 1.5s ease; 
+  }
+
+.logging-in-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logging-in-container h2{
+    margin: 30px;
+    user-select: none;
+    color: white;
+    text-shadow: 4px 4px 4px black;
+    font-size: 25px;
+}
+
+.image-container{
+    border: 8px solid #8CCDF5;
+    background-color: rgba(0, 0, 0, 0.726);
+    border-radius: 20px;
+    height: 150px;
+    width: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.image-container:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.home-button img{
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.726);
+
+}
+
+.home-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio-buttom{
+    display: flex;
+    flex-direction: column;
+}
+
+.inicio-buttom h1 {
+    color: white;
+    text-shadow: 4px 4px 4px black;
+    font-size: 25px;
+}
+
+.fondo{
+    position: absolute;
+    bottom: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+}

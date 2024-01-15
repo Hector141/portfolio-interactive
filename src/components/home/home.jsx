@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import equipo from "../logos/equipo.png";
 import papelera from "../logos/papelera.png";
 import carpeta from "../logos/carpeta.png";
@@ -13,6 +13,7 @@ import Juegos from "../juegos/juegos";
 import Clippy from "./clippy";
 import Internet from "../internet/internet";
 import Command from "../commandPrompt/Command";
+import BarraDeTareas from '../barraDeTareas/barraDeTareas';
 import { toggleProyect, minimizeproyect } from "../../redux/actions";
 
 function Home() {
@@ -30,6 +31,14 @@ function Home() {
 
   const proyectVisible = useSelector((state) => state.proyectVisible);
   const openProyecto = useSelector((state) => state.openProyects);
+
+  const [backgroundActive, setBackgroundActive] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBackgroundActive(true);
+    }, 100);
+  }, []);
 
   const handleClickAbout = () => {
     if (!dobleClic) {
@@ -89,7 +98,7 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className={`all-home ${backgroundActive ? 'active' : ''}`}>
       {clickAbout ? <About onCerrarProyectos={handleCerrarAbout} /> : null}
 
       {calculadoraVisible && <Calculator />}
@@ -150,6 +159,7 @@ function Home() {
         </div>
       )}
       {VisibleCommand && openCommand && <Command />}
+      <BarraDeTareas/>
     </div>
   );
 }
