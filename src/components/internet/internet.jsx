@@ -32,6 +32,15 @@ function Internet() {
   };
 
 
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        alert(`¡${text} copiado al portapapeles!`);
+      })
+      .catch(() => {
+        alert(`No se pudo copiar ${text} al portapapeles.`);
+      });
+  };
 
   return (
     <div className="internet-contain">
@@ -92,27 +101,27 @@ function Internet() {
             <img className="hackimg" src="https://media1.giphy.com/media/3knKct3fGqxhK/giphy.gif" alt=""/>
             <div className="tecnologias-container">
               <div className="tecnologia"><img src={js} alt=""/>
-              <label>JavaScript</label></div>
+              <p>JavaScript</p></div>
               <div className="tecnologia"><img src={ts} alt=""/>
-              <label>TypeScript</label></div>
+              <p>TypeScript</p></div>
               <div className="tecnologia"><img src={css} alt=""/>
-              <label>CSS</label></div>
+              <p>CSS</p></div>
               <div className="tecnologia"><img src={next} alt=""/>
-              <label>Next.js</label></div>
+              <p>Next.js</p></div>
               <div className="tecnologia"><img src={express} alt=""/>
-              <label>Express.js</label></div>
+              <p>Express.js</p></div>
               <div className="tecnologia"><img src={vue} alt=""/>
-              <label>Vue.js</label></div>
+              <p>Vue.js</p></div>
               <div className="tecnologia"><img src={node} alt=""/>
-               <label>Node.js</label></div>
+               <p>Node.js</p></div>
               <div className="tecnologia"><img src={clou} alt=""/>
-               <label>Cloudinary</label></div>
+               <p>Cloudinary</p></div>
               <div className="tecnologia"><img src={html} alt=""/>
-               <label>HTML</label></div>
+               <p>HTML</p></div>
               <div className="tecnologia"><img src={react} alt=""/>
-               <label>React</label></div>
+               <p>React</p></div>
               <div className="tecnologia"><img src={redux} alt=""/>
-               <label>Redux</label></div>
+               <p>Redux</p></div>
 
             </div>
 
@@ -125,15 +134,17 @@ function Internet() {
         <h2>Puedes contactarme por:</h2>
         <div className="inter-contactos">
 
-        <div className="contatos">
+        <button className="contatos" onClick={() => copyToClipboard('+54 3437 516370')}>
         📞Mensaje o llamada
-        </div>
-        <div className="contatos">
+        </button>
+        <a href="mailto:hectorcardoso18@outlook.com" >
+        <div className="contatos" >
         ✉️Correo
-        </div>
+        </div></a>
+        <a href="https://www.linkedin.com/in/hector-cardoso-503531264/" target="_blank" rel="noopener noreferrer">
         <div className="contatos">
         🔗Visita mi Linkedin
-        </div>
+        </div></a>
 
         </div>
       </div>

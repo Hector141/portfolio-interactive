@@ -113,12 +113,12 @@ function Home() {
 
       <div className="sobreMi" onClick={handleClickAbout}>
         <img className="nota" src={nota} alt="nota" />
-        <label htmlFor="nota">Sobre Mi</label>
+        <p>Sobre Mi</p>
       </div>
       <div className="home-contain">
         <div className="items-contain">
           <img className="papelera" src={papelera} alt="papelera" />
-          <label htmlFor="papelera">papelera</label>
+          <p>papelera</p>
         </div>
 
         <div className="items-contain">
@@ -128,12 +128,12 @@ function Home() {
             alt="carpeta"
             onClick={handleClickProyectos}
           />
-          <label htmlFor="carpeta">proyectos</label>
+          <p>proyectos</p>
         </div>
 
         <div className="items-contain">
           <img className="equipo" src={equipo} alt="equipo" />
-          <label htmlFor="equipo">equipo</label>
+          <p>equipo</p>
         </div>
         <div className="items-contain">
         <img
@@ -142,7 +142,7 @@ function Home() {
           alt="tetris"
           onClick={handleClickTetrisLogo}
         />
-        <label htmlFor="tetris">Tetris</label>
+        <p>Tetris</p>
       </div>
 
       </div>

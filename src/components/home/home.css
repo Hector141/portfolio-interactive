@@ -43,7 +43,7 @@
     width: 70px;
   }
   
-  .items-contain label {
+  .items-contain p, .sobreMi p {
     margin-top: 3px;
     color: white;
   }
@@ -135,6 +135,4 @@ bottom: 5px;
     margin: 8px;
   }
 
-  .sobreMi label{
-    color: white;
-  }
+

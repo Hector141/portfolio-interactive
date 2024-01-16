@@ -34,7 +34,7 @@ flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 120px;
-  width: 262px;
+  width: 290px;
   margin: 10px;
 }
 
@@ -148,6 +148,7 @@ margin: 1px;
 .secondbarrita p{
   margin: 4px;
   font-style: italic;
+  font-size: 14px;
 }
 
 .flechas{
@@ -190,5 +191,10 @@ margin: 1px;
   .proyect-barrita {
     width: 100%;
     font-size: 13px;
+  }
+  .secondbarrita p{
+    margin: 4px;
+    font-style: italic;
+    font-size: 12px;
   }
 }
