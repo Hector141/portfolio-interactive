@@ -57,21 +57,3 @@ cursor: pointer;
   }
   
 
-
-
-
-  @media (max-width: 1367px){
-
-.abajo {
-    height: 92%;
-  }
-  
-  }
-  
-  
-  @media (max-width: 1081px){
-  
-    .abajo {
-        height: 91.5%;
-      }
-  }

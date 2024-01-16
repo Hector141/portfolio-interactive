@@ -118,7 +118,7 @@
   @media (max-width: 1367px){
 
     .logo1,.logo2 , .logo3, .logo4{
-      max-height: 32px;
+      max-height: 40px;
       min-height: 30px;
   }
   .logo2-contain, .logo3-contain, .logo4-contain{
@@ -130,21 +130,17 @@
     display: flex;
 }
 
-.logo5{
-  height: 25px;
-}
-
   }
 
   
-  @media (max-width: 1081px){
+  @media (max-width: 1080px){
 
     .logo1,.logo2 , .logo3, .logo4{
-      max-height: 30px;
-      min-height: 25px;
+      max-height: 35px;
+      min-height: 30px;
   }
 
   .logo5{
-    height: 25px;
+    height: 30px;
   }
   }

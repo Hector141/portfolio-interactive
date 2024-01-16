@@ -34,7 +34,7 @@ flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 120px;
-  width: 228px;
+  width: 262px;
   margin: 10px;
 }
 
@@ -165,14 +165,8 @@ margin: 1px;
     justify-content: center;
     align-items: center;
     height: 120px;
-    width: 240px;
+    width: 305px;
     margin: 10px;
-  }
-
-    
-  .proyect-barrita {
-    width: 100%;
-    font-size: 14px;
   }
 
 
@@ -188,16 +182,13 @@ margin: 1px;
     justify-content: center;
     align-items: center;
     height: 120px;
-    width: 182px;
+    width: 235px;
     margin: 10px;
   }
 
   
   .proyect-barrita {
     width: 100%;
-    font-size: 10px;
-  }
-  .secondbarrita{
-    font-size: 9px;
+    font-size: 13px;
   }
 }
