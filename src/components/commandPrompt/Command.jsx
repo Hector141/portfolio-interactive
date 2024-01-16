@@ -21,7 +21,7 @@ function Command() {
 
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [position, setPosition] = useState({ x: 100, y: 100 });
+  const [position, setPosition] = useState({ x: 40, y: 10 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {

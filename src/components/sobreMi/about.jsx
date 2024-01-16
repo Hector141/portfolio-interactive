@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 function About({ onCerrarProyectos }) {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [position, setPosition] = useState({ x: 45, y: 10 });
+  const [position, setPosition] = useState({ x: 30, y: 5 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -15,8 +15,8 @@ function About({ onCerrarProyectos }) {
 
         const windowWidth = document.documentElement.clientWidth;
         const windowHeight = document.documentElement.clientHeight;
-        const maxX = windowWidth - 660;
-        const maxY = windowHeight - 660;
+        const maxX = windowWidth - 500;
+        const maxY = windowHeight - 545;
 
         const newX = Math.max(
           0,
