@@ -140,3 +140,19 @@ margin-top: 8px;
   margin-top: 5px;
   font-weight: bold;
 }
+
+
+
+@media (max-width: 1450px){
+
+  .perfil-contain {
+    height: 400px;
+  }
+
+  .datos-cont {
+    background-color: white;
+    height: 380px;
+ 
+  }
+
+ }

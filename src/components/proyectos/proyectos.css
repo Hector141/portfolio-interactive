@@ -174,17 +174,18 @@ margin: 1px;
 }
 
 
-@media (max-width: 1150px){
+@media (max-width: 1280px){
 
   .proyecto1 {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
+    width: 280px;
+
+  }
+ }
+
+ @media (max-width: 1150px){
+
+  .proyecto1 {
     width: 235px;
-    margin: 10px;
   }
 
   
