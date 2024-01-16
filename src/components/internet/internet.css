@@ -240,7 +240,7 @@ text-shadow: 0 0 10px #9c00ff, 0 0 20px #9c00ff, 0 0 30px #9c00ff;
 
 
 
-@media (max-width: 1367px){
+@media (max-width: 1450px){
 
 
 
@@ -264,7 +264,7 @@ text-shadow: 0 0 10px #9c00ff, 0 0 20px #9c00ff, 0 0 30px #9c00ff;
 }
 
 
-@media (max-width: 1081px){
+@media (max-width: 1150px){
 
   .inter-about{
     display: flex;

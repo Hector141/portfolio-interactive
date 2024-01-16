@@ -16,6 +16,7 @@ import Command from "../commandPrompt/Command";
 import BarraDeTareas from '../barraDeTareas/barraDeTareas';
 import { toggleProyect, minimizeproyect } from "../../redux/actions";
 
+
 function Home() {
   const dispatch = useDispatch();
   const [clickAbout, setclickAbout] = useState(false);

@@ -115,7 +115,7 @@
   color: rgba(255, 255, 255, 0.856);
 }
 
-  @media (max-width: 1367px){
+  @media (max-width: 1450px){
 
     .logo1,.logo2 , .logo3, .logo4{
       max-height: 40px;
@@ -133,7 +133,7 @@
   }
 
   
-  @media (max-width: 1080px){
+  @media (max-width: 1150px){
 
     .logo1,.logo2 , .logo3, .logo4{
       max-height: 35px;
