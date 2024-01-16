@@ -145,6 +145,8 @@
 
 
 .inter-btn{
+  width: 80%;
+  position: fixed;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -176,6 +178,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 width: 100%;
+margin-top: 100px;
+margin-bottom: 200px;
 }
 
 .inter-tecnologias img{
@@ -211,7 +215,7 @@ text-shadow: 0 0 10px #9c00ff, 0 0 20px #9c00ff, 0 0 30px #9c00ff;
   }
 
 .tecnologia img{
-  height: 80px;
+  height: 100px;
 }
 
 
@@ -242,6 +246,9 @@ text-shadow: 0 0 10px #9c00ff, 0 0 20px #9c00ff, 0 0 30px #9c00ff;
 
 @media (max-width: 1450px){
 
+  .tecnologia img{
+    height: 80px;
+  }
 
 
   .data-container{

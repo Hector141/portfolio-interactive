@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import { useDispatch } from "react-redux";
 import { toggleInternet, minimizeInternet } from "../../redux/actions";
 import flecha1 from "../logos/flechas1.jpg";
@@ -20,6 +20,9 @@ import "./internet.css";
 
 function Internet() {
   const dispatch = useDispatch();
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const contactRef = useRef(null);
 
 
   const handlerMinimizeInternet = () => {
@@ -70,11 +73,11 @@ function Internet() {
       <div className="internet-data">
         <div className="data-container">
         <div className="inter-btn">
-          <button>SOBRE MI</button>
-          <button>PROYECTOS</button>
-          <button>CONTACTO</button>
+        <button onClick={() => aboutRef.current.scrollIntoView({ behavior: "smooth" })}>SOBRE MI</button>
+        <button onClick={() => skillsRef.current.scrollIntoView({ behavior: "smooth" })}>HABILIDADES</button>
+        <button onClick={() => contactRef.current.scrollIntoView({ behavior: "smooth" })}>CONTACTO</button>
         </div>
-        <div className="inter-about">
+        <div className="inter-about" ref={aboutRef}>
           <div className="about">
           <h1>Hola, mi nombre es Hector Cardoso ✌️</h1>
           <p>Soy un desarrollador Full Stack con enfoque en tecnologías web y muchas 
@@ -95,7 +98,7 @@ function Internet() {
 
 
 
-        <div className="inter-tecnologias-container">
+        <div className="inter-tecnologias-container"  ref={skillsRef}>
           <h1>Habilidades tecnicas 😎</h1>
           <div className="inter-tecnologias">
             <img className="hackimg" src="https://media1.giphy.com/media/3knKct3fGqxhK/giphy.gif" alt=""/>
@@ -130,7 +133,7 @@ function Internet() {
 
 
 
-      <div className="inter-contactos-container">
+      <div className="inter-contactos-container" ref={contactRef}>
         <h2>Puedes contactarme por:</h2>
         <div className="inter-contactos">
 

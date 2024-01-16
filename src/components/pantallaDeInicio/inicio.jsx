@@ -41,7 +41,10 @@ function Inicio() {
           <div className='inicio-buttom'>
             <h1>Invitado</h1>
           </div>
-          <p className='fondo'>Windows 7 Porfolio - Hector Cardoso</p>
+          <p className='fondo'>Windows 7 Porfolio - Hector Cardoso
+          <br/>
+          Para disfrutar mejor usa pantalla completa con f11</p>
+       
         </>
       )}
     </div>
