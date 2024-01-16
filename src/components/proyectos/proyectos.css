@@ -157,7 +157,7 @@ margin: 1px;
 
 
 
-@media (max-height: 1450px){
+@media (max-width: 1450px){
 
   .proyecto1 {
     cursor: pointer;
